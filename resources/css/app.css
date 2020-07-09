@@ -1,0 +1,125 @@
+/**
+ * This injects Tailwind's base styles, which is a combination of
+ * Normalize.css and some additional base styles.
+ *
+ * You can see the styles here:
+ * https://unpkg.com/tailwindcss/dist/base.css
+ *
+ * If using `postcss-import`, use this import instead:
+ *
+ * @import "tailwindcss/base";
+ */
+@tailwind base;
+
+/**
+ * This injects any component classes registered by plugins.
+ *
+ * If using `postcss-import`, use this import instead:
+ *
+ * @import "tailwindcss/components";
+ */
+@tailwind components;
+
+/**
+ * Here you would add any of your custom component classes; stuff that you'd
+ * want loaded *before* the utilities so that the utilities could still
+ * override them.
+ *
+ * Example:
+ *
+ * .btn { ... }
+ * .form-input { ... }
+ *
+ * Or if using a preprocessor or `postcss-import`:
+ *
+ * @import "components/buttons";
+ * @import "components/forms";
+ */
+
+h1 {
+    font-family: 'Work Sans', sans-serif;
+    @apply text-2xl;
+}
+
+h2 {
+    font-family: 'Work Sans', sans-serif;
+    @apply text-xl;
+}
+
+h3 {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.text-superlarge {
+    font-size: 60px;
+    font-weight: 800;
+}
+
+.text-supermedium {
+    font-size: 24px;
+    font-weight: inherit;
+}
+
+.bg-theme {
+    @apply bg-gray-900;
+}
+
+.btn {
+    @apply bg-gray-300 p-1 border border-gray-600;
+}
+
+.btn:hover {
+    @apply bg-gray-500 p-1 border border-gray-600;
+}
+
+.btn-green {
+    @apply bg-green-300 p-1 border border-green-600;
+}
+
+.btn-green:hover {
+    @apply bg-green-500 p-1 border border-green-600;
+}
+
+ol li{
+    list-style: decimal
+}
+
+ul li{
+    list-style: disc
+}
+
+pre {
+    background: #eee;
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+}
+
+
+/**
+ * This injects all of Tailwind's utility classes, generated based on your
+ * config file.
+ *
+ * If using `postcss-import`, use this import instead:
+ *
+ * @import "tailwindcss/utilities";
+ */
+@tailwind utilities;
+
+/**
+ * Here you would add any custom utilities you need that don't come out of the
+ * box with Tailwind.
+ *
+ * Example :
+ *
+ * .bg-pattern-graph-paper { ... }
+ * .skew-45 { ... }
+ *
+ * Or if using a preprocessor or `postcss-import`:
+ *
+ * @import "utilities/background-patterns";
+ * @import "utilities/skew-transforms";
+ */
+
+
